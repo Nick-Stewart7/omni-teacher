@@ -66,7 +66,7 @@ pip install -r requirements.txt
 5. Set up environment variables:
 ```bash
 # Copy the example env file
-cp agent/.env.example agent/.env
+cp .env.example .env
 
 # Edit agent/.env and add your Google API key
 # GOOGLE_API_KEY=your_api_key_here
@@ -113,13 +113,13 @@ omni-teacher/
 ├── agent/                      # Agent definitions
 │   ├── agent.py               # Coordinator agent
 │   ├── prompt.py              # Coordinator prompt
-│   ├── .env                   # Environment variables
 │   └── subagents/             # Specialized subagents
 │       ├── researcher/        # Research agent
 │       ├── lesson_planner/    # Lesson planning agent
 │       └── teacher/           # Teaching agent
 ├── api.py                     # FastAPI application
 ├── app.py                     # Streamlit UI
+├── .env                       # Environment variables
 ├── requirements.txt           # Python dependencies
 ├── architecture.md            # Architecture documentation
 ├── resources.md              # Useful resources
@@ -162,7 +162,7 @@ This is a barebones local version with ephemeral sessions. Future enhancements c
 ## Troubleshooting
 
 **API not starting:**
-- Ensure your Google API key is set in `agent/.env`
+- Ensure your Google API key is set in `.env`
 - Check that port 8000 is not in use
 
 **Streamlit can't connect:**
@@ -183,3 +183,4 @@ This is a barebones local version with ephemeral sessions. Future enhancements c
 ## License
 
 This is a capstone project for educational purposes.
+
