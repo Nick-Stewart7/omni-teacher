@@ -1,0 +1,6 @@
+google-adk[all]
+fastapi
+uvicorn[standard]
+streamlit
+python-dotenv
+pydantic
