@@ -15,7 +15,7 @@ USER_ID = "user"
 SESSION_ID = "session1_id"
 
 # Load environment variables
-load_dotenv("agent/.env")
+load_dotenv(".env")
 
 # Initialize FastAPI app
 app = FastAPI(
@@ -77,7 +77,6 @@ async def chat(request: ChatRequest):
         async for event in agent_runner.run_async(user_id=USER_ID, session_id=SESSION_ID, new_message=user_message):
             if event.is_final_response() and event.content and event.content.parts:
                 response_text = event.content.parts[0].text
-        print(f"Agent 1 Response: {response_text}")
 
         return ChatResponse(
             response=response_text,
